@@ -2,14 +2,15 @@
 **/.terraform/*
 .terraform*
 
-!.terraformrc
-
 # .tfstate files
 *.tfstate
 *.tfstate.*
 
 # own secret vars store.
 personal.auto.tfvars
-*.tfvars
-**/keys/
-authorized_key.json
+
+
+#ansible
+hosts.ini
+for.ini
+hosts.yaml
