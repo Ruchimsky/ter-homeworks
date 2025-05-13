@@ -1,8 +1,4 @@
 ###cloud vars
-variable "token" {
-  type        = string
-  description = "OAuth-token; https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token"
-}
 
 variable "cloud_id" {
   type        = string
@@ -29,4 +25,17 @@ variable "vpc_name" {
   type        = string
   default     = "develop"
   description = "VPC network&subnet name"
+}
+
+variable "vms_ssh_root_key" {
+  type        = string
+  default     = "<your_ssh_ed25519_key>"
+  description = "ssh-keygen -t ed25519"
+  sensitive = true
+}
+
+variable "vm_web_template" {
+  type = string
+  description = "Шаблон ВМ"
+  default = "ubuntu-2004-lts"
 }

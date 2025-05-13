@@ -1,0 +1,14 @@
+[webservers]
+%{ for name, host in webservers ~}
+${name} ansible_host=${host.ip} fqdn=${host.fqdn}
+%{ endfor ~}
+
+[databases]
+%{ for name, host in databases ~}
+${name} ansible_host=${host.ip} fqdn=${host.fqdn}
+%{ endfor ~}
+
+[storage]
+%{ for name, host in storage ~}
+${name} ansible_host=${host.ip} fqdn=${host.fqdn}
+%{ endfor ~}

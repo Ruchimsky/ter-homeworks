@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "yandex" {
-  token     = var.token
+  service_account_key_file = file("~/ter-homeworks/03/src/authorized_key.json")
   cloud_id  = var.cloud_id
   folder_id = var.folder_id
   zone      = var.default_zone
